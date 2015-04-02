@@ -809,15 +809,15 @@ class AutoSelect2TagField(AutoViewFieldMixin, HeavySelect2TagField):
 
 ### Heavy field, specialized for Model, that uses central AutoView ###
 
-class AutoModelSelect2Field(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2ChoiceField, metaclass=UnhideableQuerysetType):
-    """
-    Auto Heavy Select2 field, specialized for Models.
-
-    This needs to be subclassed. The first instance of a class (sub-class) is used to serve all incoming
-    json query requests for that type (class).
-    """
-
-    widget = AutoHeavySelect2Widget
+# class AutoModelSelect2Field(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2ChoiceField, metaclass=UnhideableQuerysetType):
+#     """
+#     Auto Heavy Select2 field, specialized for Models.
+#
+#     This needs to be subclassed. The first instance of a class (sub-class) is used to serve all incoming
+#     json query requests for that type (class).
+#     """
+#
+#     widget = AutoHeavySelect2Widget
 
 
 class AutoModelSelect2MultipleField(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2MultipleChoiceField, metaclass=UnhideableQuerysetType):

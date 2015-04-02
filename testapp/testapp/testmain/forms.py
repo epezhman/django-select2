@@ -11,21 +11,21 @@ def validate_fail_always(value):
 
 ############# Choice fields ###################
 
-class EmployeeChoices(AutoModelSelect2Field):
-    queryset = Employee.objects
-    search_fields = ['name__icontains', ]
+# class EmployeeChoices(AutoModelSelect2Field):
+#     queryset = Employee.objects
+#     search_fields = ['name__icontains', ]
 
 class ClassRoomChoices(AutoModelSelect2MultipleField):
     queryset = ClassRoom.objects
     search_fields = ['number__icontains', ]
 
-class ClassRoomSingleChoices(AutoModelSelect2Field):
-    queryset = ClassRoom.objects
-    search_fields = ['number__icontains', ]
+# class ClassRoomSingleChoices(AutoModelSelect2Field):
+#     queryset = ClassRoom.objects
+#     search_fields = ['number__icontains', ]
 
-class WordChoices(AutoModelSelect2Field):
-    queryset = Word.objects
-    search_fields = ['word__icontains', ]
+# class WordChoices(AutoModelSelect2Field):
+#     queryset = Word.objects
+#     search_fields = ['word__icontains', ]
 
 class MultiWordChoices(AutoModelSelect2MultipleField):
     queryset = Word.objects

@@ -19,8 +19,6 @@ Class Diagrams
 .. inheritance-diagram:: django_select2.fields.AutoSelect2Field django_select2.fields.AutoSelect2MultipleField django_select2.fields.AutoSelect2TagField
     :parts: 1
 
-.. inheritance-diagram:: django_select2.fields.AutoModelSelect2Field
-    :parts: 1
 
 .. inheritance-diagram:: django_select2.fields.AutoModelSelect2MultipleField django_select2.fields.AutoModelSelect2TagField
     :parts: 1
