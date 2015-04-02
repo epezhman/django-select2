@@ -820,15 +820,15 @@ class AutoSelect2TagField(AutoViewFieldMixin, HeavySelect2TagField):
 #     widget = AutoHeavySelect2Widget
 
 
-class AutoModelSelect2MultipleField(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2MultipleChoiceField, metaclass=UnhideableQuerysetType):
-    """
-    Auto Heavy Select2 field for multiple choices, specialized for Models.
-
-    This needs to be subclassed. The first instance of a class (sub-class) is used to serve all incoming
-    json query requests for that type (class).
-    """
-
-    widget = AutoHeavySelect2MultipleWidget
+# class AutoModelSelect2MultipleField(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2MultipleChoiceField, metaclass=UnhideableQuerysetType):
+#     """
+#     Auto Heavy Select2 field for multiple choices, specialized for Models.
+#
+#     This needs to be subclassed. The first instance of a class (sub-class) is used to serve all incoming
+#     json query requests for that type (class).
+#     """
+#
+#     widget = AutoHeavySelect2MultipleWidget
 
 class AutoModelSelect2TagField(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2TagField, metaclass=UnhideableQuerysetType):
     """

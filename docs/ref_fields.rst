@@ -20,8 +20,6 @@ Class Diagrams
     :parts: 1
 
 
-.. inheritance-diagram:: django_select2.fields.AutoModelSelect2MultipleField django_select2.fields.AutoModelSelect2TagField
-    :parts: 1
 
 Reference
 ---------
