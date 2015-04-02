@@ -31,11 +31,11 @@ def validate_fail_always(value):
 #     queryset = Word.objects
 #     search_fields = ['word__icontains', ]
 
-class TagField(AutoModelSelect2TagField):
-    queryset = Tag.objects
-    search_fields = ['tag__icontains', ]
-    def get_model_field_values(self, value):
-        return {'tag': value}
+# class TagField(AutoModelSelect2TagField):
+#     queryset = Tag.objects
+#     search_fields = ['tag__icontains', ]
+#     def get_model_field_values(self, value):
+#         return {'tag': value}
 
 class SelfChoices(AutoSelect2Field):
     def get_val_txt(self, value):

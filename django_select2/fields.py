@@ -830,28 +830,28 @@ class AutoSelect2TagField(AutoViewFieldMixin, HeavySelect2TagField):
 #
 #     widget = AutoHeavySelect2MultipleWidget
 
-class AutoModelSelect2TagField(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2TagField, metaclass=UnhideableQuerysetType):
-    """
-    Auto Heavy Select2 field for tagging, specialized for Models.
-
-    This needs to be subclassed. The first instance of a class (sub-class) is used to serve all incoming
-    json query requests for that type (class).
-
-    .. warning:: :py:exc:`NotImplementedError` would be thrown if :py:meth:`get_model_field_values` is not implemented.
-
-    Example::
-    
-        class Tag(models.Model):
-            tag = models.CharField(max_length=10, unique=True)
-            def __unicode__(self):
-                return unicode(self.tag)
-
-        class TagField(AutoModelSelect2TagField):
-            queryset = Tag.objects
-            search_fields = ['tag__icontains', ]
-            def get_model_field_values(self, value):
-                return {'tag': value}
-
-    """
-
-    widget = AutoHeavySelect2TagWidget
+# class AutoModelSelect2TagField(ModelResultJsonMixin, AutoViewFieldMixin, HeavyModelSelect2TagField, metaclass=UnhideableQuerysetType):
+#     """
+#     Auto Heavy Select2 field for tagging, specialized for Models.
+#
+#     This needs to be subclassed. The first instance of a class (sub-class) is used to serve all incoming
+#     json query requests for that type (class).
+#
+#     .. warning:: :py:exc:`NotImplementedError` would be thrown if :py:meth:`get_model_field_values` is not implemented.
+#
+#     Example::
+#
+#         class Tag(models.Model):
+#             tag = models.CharField(max_length=10, unique=True)
+#             def __unicode__(self):
+#                 return unicode(self.tag)
+#
+#         class TagField(AutoModelSelect2TagField):
+#             queryset = Tag.objects
+#             search_fields = ['tag__icontains', ]
+#             def get_model_field_values(self, value):
+#                 return {'tag': value}
+#
+#     """
+#
+#     widget = AutoHeavySelect2TagWidget
